@@ -1,0 +1,47 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity spi_MCP23S08_top is
+    port(
+    	i_clk		: in std_logic;
+        i_reset 	: in std_logic;
+      --  r_clk_10hz  : in std_logic;
+        o_spi_clk	: out std_logic;
+        o_spi_mosi 	: out std_logic;
+        o_cs		: out std_logic);
+end spi_MCP23S08_top;
+
+architecture rtl of spi_MCP23S08_top is
+
+    signal r_clk_10Mhz : std_logic;
+    signal r_clk_10hz : std_logic;
+        
+begin
+
+	spi_MCP23S08_inst: entity work.spi_MCP23S08(rtl)
+    	port map (
+            i_clk		=> r_clk_10Mhz,	
+            i_reset		=> i_reset,
+            i_tx_pulse	=> r_clk_10hz,
+            o_spi_clk	=> o_spi_clk,
+            o_spi_mosi 	=> o_spi_mosi,
+            o_cs 		=> o_cs);
+    
+	clock_div_10Mhz: entity work.clk_div(rtl)
+        generic map (
+            g_fin  => 100e6,
+            g_fout => 10e6)
+    	port map (
+            i_clk		=> i_clk,	
+            i_reset		=> i_reset, 
+            o_clk 		=> r_clk_10Mhz);
+            
+	clock_div_10hz: entity work.clk_div(rtl)
+        generic map (
+            g_fin  => 100e6,
+            g_fout => 1000)
+    	port map (
+            i_clk		=> i_clk,	
+            i_reset		=> i_reset, 
+            o_clk 		=> r_clk_10hz);
+end rtl;
