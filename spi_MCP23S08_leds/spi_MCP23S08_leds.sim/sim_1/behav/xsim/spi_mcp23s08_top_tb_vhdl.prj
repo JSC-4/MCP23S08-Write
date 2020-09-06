@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../spi_MCP23S08_leds.srcs/sources_1/new/clk_div.vhd" \
+"../../../../spi_MCP23S08_leds.srcs/sources_1/new/debounce.vhd" \
+"../../../../spi_MCP23S08_leds.srcs/sources_1/new/spi_MCP23S08.vhd" \
+"../../../../spi_MCP23S08_leds.srcs/sources_1/new/spi_MCP23S08_top.vhd" \
+"../../../../spi_MCP23S08_leds.srcs/sim_1/new/spi_mcp23s08_top_tb.vhd" \
+
+# Do not sort compile order
+nosort

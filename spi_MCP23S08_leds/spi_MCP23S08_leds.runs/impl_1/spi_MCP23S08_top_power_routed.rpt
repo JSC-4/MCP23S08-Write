@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu Sep  3 14:54:42 2020
+| Date             : Sun Sep  6 10:02:29 2020
 | Host             : DESKTOP-A6S5VF0 running 64-bit major release  (build 9200)
 | Command          : report_power -file spi_MCP23S08_top_power_routed.rpt -pb spi_MCP23S08_top_power_summary_routed.pb -rpx spi_MCP23S08_top_power_routed.rpx
 | Design           : spi_MCP23S08_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 10.950       |
+| Total On-Chip Power (W)  | 1.595        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.739       |
-| Device Static (W)        | 0.211        |
+| Dynamic (W)              | 1.492        |
+| Device Static (W)        | 0.102        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 35.0         |
-| Junction Temperature (C) | 75.0         |
+| Max Ambient (C)          | 77.7         |
+| Junction Temperature (C) | 32.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.228 |      123 |       --- |             --- |
-|   LUT as Logic |     0.159 |       34 |     63400 |            0.05 |
-|   BUFG         |     0.052 |        2 |        32 |            6.25 |
-|   Register     |     0.016 |       56 |    126800 |            0.04 |
+| Slice Logic    |     0.101 |      130 |       --- |             --- |
+|   LUT as Logic |     0.082 |       36 |     63400 |            0.06 |
+|   BUFG         |     0.010 |        2 |        32 |            6.25 |
+|   Register     |     0.009 |       59 |    126800 |            0.05 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.246 |       75 |       --- |             --- |
-| I/O            |    10.266 |        5 |       210 |            2.38 |
-| Static Power   |     0.211 |          |           |                 |
-| Total          |    10.950 |          |           |                 |
+| Signals        |     0.065 |       77 |       --- |             --- |
+| I/O            |     1.326 |        6 |       210 |            2.86 |
+| Static Power   |     0.102 |          |           |                 |
+| Total          |     1.595 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,16 +70,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.583 |       0.477 |      0.106 |
-| Vccaux    |       1.800 |     0.406 |       0.376 |      0.030 |
-| Vcco33    |       3.300 |     2.908 |       2.904 |      0.004 |
+| Vccint    |       1.000 |     0.194 |       0.174 |      0.020 |
+| Vccaux    |       1.800 |     0.067 |       0.048 |      0.019 |
+| Vcco33    |       3.300 |     0.377 |       0.373 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.003 |       0.000 |      0.003 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -137,10 +137,10 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| spi_MCP23S08_top    |    10.739 |
-|   clock_div_10Mhz   |     0.070 |
-|   clock_div_10hz    |     0.055 |
-|   spi_MCP23S08_inst |     0.268 |
+| spi_MCP23S08_top    |     1.492 |
+|   clock_div_10Mhz   |     0.059 |
+|   debounce          |     0.024 |
+|   spi_MCP23S08_inst |     0.060 |
 +---------------------+-----------+
 
 

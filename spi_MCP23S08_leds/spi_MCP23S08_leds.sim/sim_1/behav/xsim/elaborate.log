@@ -1,16 +1,7 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot spi_MCP23S08_tb_behav xil_defaultlib.spi_MCP23S08_tb -log elaborate.log 
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot spi_mcp23s08_top_tb_behav xil_defaultlib.spi_mcp23s08_top_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture rtl of entity xil_defaultlib.spi_MCP23S08 [spi_mcp23s08_default]
-Compiling architecture sim of entity xil_defaultlib.spi_mcp23s08_tb
-Built simulation snapshot spi_MCP23S08_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

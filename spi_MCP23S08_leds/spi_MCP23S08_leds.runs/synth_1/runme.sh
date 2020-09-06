@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.runs/synth_1'
+HD_PWD='D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

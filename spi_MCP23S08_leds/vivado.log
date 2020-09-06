@@ -1,0 +1,422 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep  6 11:08:06 2020
+# Process ID: 17320
+# Current directory: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23656 D:\VHDL_Projects\MCP23S08\spi_MCP23S08_leds\spi_MCP23S08_leds.xpr
+# Log file: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/vivado.log
+# Journal file: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+set_property top debounce_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'debounce_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj debounce_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debounce_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot debounce_tb_behav xil_defaultlib.debounce_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture exp_fsmd_arch of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture sim of entity xil_defaultlib.debounce_tb
+Built simulation snapshot debounce_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "debounce_tb_behav -key {Behavioral:sim_1:Functional:debounce_tb} -tclbatch {debounce_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source debounce_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: simulation complete
+Time: 400 ns  Iteration: 0  Process: /debounce_tb/line__36  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd
+$finish called at time : 400 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd" Line 49
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'debounce_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+Failure: simulation complete
+Time: 800 ns  Iteration: 0  Process: /debounce_tb/line__36  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd
+$finish called at time : 800 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd" Line 49
+set_property top clk_div_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'clk_div_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj clk_div_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/clk_div_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clk_div_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clk_div_tb_behav xil_defaultlib.clk_div_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture rtl of entity xil_defaultlib.clk_div [\clk_div(g_fout=1000)\]
+Compiling architecture sim of entity xil_defaultlib.clk_div_tb
+Built simulation snapshot clk_div_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/xsim.dir/clk_div_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep  6 11:13:06 2020...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Failure: simulation complete
+Time: 400 ns  Iteration: 0  Process: /debounce_tb/line__36  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd
+$finish called at time : 400 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd" Line 49
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 852.719 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'clk_div_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj clk_div_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clk_div_tb_behav xil_defaultlib.clk_div_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Failure: simulation complete
+Time: 400 ns  Iteration: 0  Process: /debounce_tb/line__36  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd
+$finish called at time : 400 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/debounce_tb.vhd" Line 49
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'clk_div_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj clk_div_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clk_div_tb_behav xil_defaultlib.clk_div_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "clk_div_tb_behav -key {Behavioral:sim_1:Functional:clk_div_tb} -tclbatch {clk_div_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source clk_div_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'clk_div_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+Failure: simulation complete
+Time: 100000100 ns  Iteration: 0  Process: /clk_div_tb/line__37  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/clk_div_tb.vhd
+$finish called at time : 100000100 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/clk_div_tb.vhd" Line 45
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 852.719 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'clk_div_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj clk_div_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/clk_div_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clk_div_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clk_div_tb_behav xil_defaultlib.clk_div_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture rtl of entity xil_defaultlib.clk_div [clk_div_default]
+Compiling architecture sim of entity xil_defaultlib.clk_div_tb
+Built simulation snapshot clk_div_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 852.719 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top spi_MCP23S08_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_MCP23S08_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj spi_MCP23S08_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'spi_MCP23S08_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot spi_MCP23S08_tb_behav xil_defaultlib.spi_MCP23S08_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.spi_MCP23S08 [spi_mcp23s08_default]
+Compiling architecture sim of entity xil_defaultlib.spi_mcp23s08_tb
+Built simulation snapshot spi_MCP23S08_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_MCP23S08_tb_behav -key {Behavioral:sim_1:Functional:spi_MCP23S08_tb} -tclbatch {spi_MCP23S08_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source spi_MCP23S08_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_MCP23S08_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/spi_MCP23S08_tb/spi_MCP23S08_inst}} 
+add_wave {{/spi_MCP23S08_tb/spi_MCP23S08_inst}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/spi_MCP23S08_tb/c_CLOCKPERIOD}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/spi_MCP23S08_tb/r_mosi_reg}} 
+run all
+Failure: simulation complete
+Time: 2695 ns  Iteration: 0  Process: /spi_MCP23S08_tb/spi_mosi  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd
+$finish called at time : 2695 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd" Line 76
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_MCP23S08_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj spi_MCP23S08_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot spi_MCP23S08_tb_behav xil_defaultlib.spi_MCP23S08_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run all
+Failure: simulation complete
+Time: 2695 ns  Iteration: 0  Process: /spi_MCP23S08_tb/spi_mosi  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd
+$finish called at time : 2695 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd" Line 76
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top spi_mcp23s08_top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_mcp23s08_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj spi_mcp23s08_top_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_mcp23s08_top_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'spi_mcp23s08_top_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot spi_mcp23s08_top_tb_behav xil_defaultlib.spi_mcp23s08_top_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.spi_MCP23S08 [spi_mcp23s08_default]
+Compiling architecture rtl of entity xil_defaultlib.clk_div [clk_div_default]
+Compiling architecture exp_fsmd_arch of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture rtl of entity xil_defaultlib.spi_MCP23S08_top [spi_mcp23s08_top_default]
+Compiling architecture sim of entity xil_defaultlib.spi_mcp23s08_top_tb
+Built simulation snapshot spi_mcp23s08_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_mcp23s08_top_tb_behav -key {Behavioral:sim_1:Functional:spi_mcp23s08_top_tb} -tclbatch {spi_mcp23s08_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source spi_mcp23s08_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_mcp23s08_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+Failure: simulation complete
+Time: 11400 ns  Iteration: 0  Process: /spi_mcp23s08_top_tb/line__38  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_mcp23s08_top_tb.vhd
+$finish called at time : 11400 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_mcp23s08_top_tb.vhd" Line 60
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_mcp23s08_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj spi_mcp23s08_top_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5692f466c7974471b2c23f6a0d7f927e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot spi_mcp23s08_top_tb_behav xil_defaultlib.spi_mcp23s08_top_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 11:30:41 2020...

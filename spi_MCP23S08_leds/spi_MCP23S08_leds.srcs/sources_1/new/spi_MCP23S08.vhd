@@ -1,3 +1,14 @@
+-- This code interfaces with the MCP23S08 spi ic.
+-- The I/O direction register is configures as an output 
+-- and does not read from the o_spi_mosi line.
+--
+-- The i_tx_pulse is from a debounced input switch, o_spi_clk is 
+-- set to 10Mhz, both from the top module.
+--
+-- FPGA: Nexys-4 DDR
+-- Author: Jerome Samuels-Clarke
+-- Website: www.jscblog.com
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
@@ -6,16 +17,12 @@ entity spi_MCP23S08 is
 	port (
     	i_clk		: in std_logic;
         i_reset 	: in std_logic;
-        -- mosi signals
+        
+        -- mosi signal 
         i_tx_pulse	: in std_logic;
-        
-        -- miso signals
-        --o_rx_dv		: out std_logic;
-        --o_rx_byte	: out std_logic_vector(7 downto 0);
-        
+
         -- spi interface
         o_spi_clk	: out std_logic;
-        --i_spi_miso 	: in std_logic;
         o_spi_mosi 	: out std_logic;
         o_cs		: out std_logic);
 end entity;
@@ -24,22 +31,18 @@ architecture rtl of spi_MCP23S08 is
     type t_ctrl_path is (s_idle, s_enable, s_xmit);
     signal r_state : t_ctrl_path := s_idle;
     
-    constant c_mcp23s08_addr_w 	: std_logic_vector(7 downto 0) := X"40"; -- address of mcp23s08 for write command
-    --constant c_mcp23s08_addr_r 	: std_logic_vector(7 downto 0) := X"41"; -- address of mcp23s08 for read command
-    constant c_mcp23s08_iodir  	: std_logic_vector(7 downto 0) := X"00"; -- i/o direction register
-    constant c_mcp23s08_iodir_w	: std_logic_vector(7 downto 0) := X"00"; -- set leds as output
-    constant c_mcp23s08_gpio   	: std_logic_vector(7 downto 0) := X"09"; -- gpio register
-    constant c_mcp23s08_gpio_w 	: std_logic_vector(7 downto 0) := X"FF"; -- turn leds on
-	--constant c_mcp23s08_read_length : std_logic_vector(7 downto 0) := (others => '0'); -- store mcp23s08 read
+    constant c_MCP23S08_ADDR_W 	: std_logic_vector(7 downto 0) := X"40"; -- address of mcp23s08 for write command
+    constant c_MCP23S08_IODIR  	: std_logic_vector(7 downto 0) := X"00"; -- i/o direction register
+    constant c_MCP23S08_IODIR_W	: std_logic_vector(7 downto 0) := X"00"; -- set leds as output
+    constant c_MCP23S08_GPIO   	: std_logic_vector(7 downto 0) := X"09"; -- gpio register
+    constant c_MCP23S08_GPIO_W 	: std_logic_vector(7 downto 0) := X"AA"; -- turn leds on
     
     signal r_tx_reg 	: std_logic_vector(23 downto 0) := (others => '0'); -- transmit register
-    --signal r_rx_reg 	: std_logic_vector(7 downto 0)  := (others => '0'); -- recieve register
-    signal r_tmr_reg	: std_logic_vector(23 downto 0) := (others => '0');
-    signal r_load_tx	: std_logic := '0';
-	signal r_done_tick	: std_logic := '0';
+    signal r_tmr_reg	: std_logic_vector(23 downto 0) := (others => '0'); -- shift counter  for transmission
+    signal r_load_tx	: std_logic := '0'; -- signal to load mosi data
+	signal r_done_tick	: std_logic := '0'; -- set after transmission is complete
     
-    signal r_setup		: std_logic := '0';
-    --signal r_cap_cnt	: integer range 0 to 7;
+    signal r_setup		: std_logic := '0'; -- set after the i/o direction 
 begin
 
 	fsm_proc : process (i_clk, i_reset)
@@ -77,13 +80,13 @@ begin
             r_setup		<= '0';
         elsif (falling_edge(i_clk)) then
         	if (r_load_tx = '1') then
-            	if (r_setup = '0') then
-            		r_tx_reg  <= c_mcp23s08_addr_w & c_mcp23s08_iodir & c_mcp23s08_iodir_w;
+            	if (r_setup = '0') then        -- check to see if the i/o has been set
+            		r_tx_reg  <= c_MCP23S08_ADDR_W & c_MCP23S08_IODIR & c_MCP23S08_IODIR_W;
                     r_setup <= '1';
               	else
-            		r_tx_reg  <= c_mcp23s08_addr_w & c_mcp23s08_gpio & c_mcp23s08_gpio_w;
+            		r_tx_reg  <= c_MCP23S08_ADDR_W & c_MCP23S08_GPIO & c_MCP23S08_GPIO_W;
                 end if;
-                r_tmr_reg <= (others => '1');
+                r_tmr_reg <= (others => '1'); -- start o_spi_clk
           	else
             	r_tx_reg <= r_tx_reg(r_tx_reg'high-1 downto r_tx_reg'low) & '0';
             	r_tmr_reg <= r_tmr_reg(r_tmr_reg'high-1 downto r_tmr_reg'low) & '0';

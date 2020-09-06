@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../spi_MCP23S08_leds.srcs/sources_1/new/clk_div.vhd" \
+"../../../../spi_MCP23S08_leds.srcs/sim_1/new/clk_div_tb.vhd" \
+
+# Do not sort compile order
+nosort

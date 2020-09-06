@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -68,18 +67,16 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/JSC/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20912-DESKTOP-A6S5VF0/incrSyn
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.cache/wt [current_project]
-  set_property parent.project_path D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.xpr [current_project]
-  set_property ip_output_repo D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.cache/wt [current_project]
+  set_property parent.project_path D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.xpr [current_project]
+  set_property ip_output_repo D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.runs/synth_1/spi_MCP23S08_top.dcp
-  read_xdc D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/constrs_1/new/constraints.xdc
+  add_files -quiet D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.runs/synth_1/spi_MCP23S08_top.dcp
+  read_xdc D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/constrs_1/new/constraints.xdc
   link_design -top spi_MCP23S08_top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

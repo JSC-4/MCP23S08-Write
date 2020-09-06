@@ -2,12 +2,12 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Sep  3 09:15:21 2020
-# Process ID: 17496
-# Current directory: D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/xsim.dir/spi_MCP23S08_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Sun Sep  6 11:16:18 2020
+# Process ID: 12564
+# Current directory: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/xsim.dir/clk_div_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/xsim.dir/spi_MCP23S08_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Thu Sep  3 09:15:22 2020...
+source D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.sim/sim_1/behav/xsim/xsim.dir/clk_div_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep  6 11:16:19 2020...

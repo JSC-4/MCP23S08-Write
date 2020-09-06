@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/VHDL_Projects/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/constrs_1/new/constraints.xdc rfile:../../../spi_MCP23S08_leds.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/constrs_1/new/constraints.xdc rfile:../../../spi_MCP23S08_leds.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports i_clk]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
@@ -9,3 +9,5 @@ set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN F16 [get_ports o_spi_clk]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G16 [get_ports o_spi_mosi]
+set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N17 [get_ports i_sw]
