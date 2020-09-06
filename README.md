@@ -6,6 +6,7 @@ This project was to use the MCP23S08 ic with the Nexys-4 DDR FPGA board. The MCP
 
 * [Vivado](https://www.xilinx.com/products/design-tools/vivado.html) - The software used
 * [Nexys-4 DDR](https://store.digilentinc.com/nexys-4-artix-7-fpga-trainer-board-limited-time-see-nexys4-ddr/) - The hardware used
+* [MCP23S08](https://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf) - MCP23S08 datasheet
 
 ## Website
 
