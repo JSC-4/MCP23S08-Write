@@ -1,4 +1,4 @@
-# MCP23S08
+# MCP23S08 (write)
 
 This project was to use the MCP23S08 ic with the Nexys-4 DDR FPGA board. The MCP23S08 communicates via SPI and is configured to write to the GPIO address and not to read. The onboard push button is used to trigger the spi communication, which could be changed to make the process trigger internally.
 
