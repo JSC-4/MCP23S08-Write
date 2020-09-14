@@ -1,4 +1,4 @@
--- This top file for the MCP23S08 spi ic.
+-- This top file for the MCP23S08 spi ic (leds).
 -- It links together the spi and clock divider modules.
 -- The input switch is debounce and set as the pulse trigger
 -- to send the commands to the ic.

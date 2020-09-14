@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Sep  6 10:02:29 2020
+| Date         : Mon Sep  7 10:59:31 2020
 | Host         : DESKTOP-A6S5VF0 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file spi_MCP23S08_top_methodology_drc_routed.rpt -pb spi_MCP23S08_top_methodology_drc_routed.pb -rpx spi_MCP23S08_top_methodology_drc_routed.rpx
 | Design       : spi_MCP23S08_top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 59
+             Violations found: 60
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 59         |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 60         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -214,115 +214,120 @@ Related violations: <none>
 
 TIMING-17#37 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[10]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[11]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[12]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[13]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[14]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[15]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[16]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[17]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[18]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[19]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[1]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[20]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[21]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[22]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[23]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[2]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[3]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[4]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[5]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[6]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[7]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Warning
 Non-clocked sequential cell  
-The clock pin spi_MCP23S08_inst/r_tx_reg_reg[8]/C is not reached by a timing clock
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Warning
+Non-clocked sequential cell  
+The clock pin spi_MCP23S08_inst/r_tx_reg_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Warning
 Non-clocked sequential cell  
 The clock pin spi_MCP23S08_inst/r_tx_reg_reg[9]/C is not reached by a timing clock
 Related violations: <none>

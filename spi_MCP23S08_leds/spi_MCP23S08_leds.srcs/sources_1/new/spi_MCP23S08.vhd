@@ -1,4 +1,4 @@
--- This code interfaces with the MCP23S08 spi ic.
+-- This code interfaces with the MCP23S08 spi ic to control leds.
 -- The I/O direction register is configures as an output 
 -- and does not read from the o_spi_mosi line.
 --
@@ -20,7 +20,6 @@ entity spi_MCP23S08 is
         
         -- mosi signal 
         i_tx_pulse	: in std_logic;
-
         -- spi interface
         o_spi_clk	: out std_logic;
         o_spi_mosi 	: out std_logic;

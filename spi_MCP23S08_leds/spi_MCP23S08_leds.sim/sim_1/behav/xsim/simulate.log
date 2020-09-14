@@ -1,2 +1,5 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
+Failure: simulation complete
+Time: 2695 ns  Iteration: 0  Process: /spi_MCP23S08_tb/spi_mosi  File: D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd
+$finish called at time : 2695 ns : File "D:/VHDL_Projects/MCP23S08/spi_MCP23S08_leds/spi_MCP23S08_leds.srcs/sim_1/new/spi_MCP23S08_tb.vhd" Line 76

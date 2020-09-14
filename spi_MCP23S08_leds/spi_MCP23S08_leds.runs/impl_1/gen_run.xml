@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1599382890">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1599472716">
   <File Type="ROUTE-PWR" Name="spi_MCP23S08_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="spi_MCP23S08_top.tcl"/>
   <File Type="BITSTR-BMM" Name="spi_MCP23S08_top_bd.bmm"/>

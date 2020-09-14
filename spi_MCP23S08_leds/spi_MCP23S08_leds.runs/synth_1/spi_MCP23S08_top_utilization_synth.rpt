@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Sep  5 20:40:02 2020
+| Date         : Mon Sep  7 10:41:40 2020
 | Host         : DESKTOP-A6S5VF0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file spi_MCP23S08_top_utilization_synth.rpt -pb spi_MCP23S08_top_utilization_synth.pb
 | Design       : spi_MCP23S08_top
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |   36 |     0 |     63400 |  0.06 |
 |   LUT as Logic          |   36 |     0 |     63400 |  0.06 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |   59 |     0 |    126800 |  0.05 |
-|   Register as Flip Flop |   59 |     0 |    126800 |  0.05 |
+| Slice Registers         |   60 |     0 |    126800 |  0.05 |
+|   Register as Flip Flop |   60 |     0 |    126800 |  0.05 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 55    |          Yes |           - |        Reset |
+| 56    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 3     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    6 |     0 |       210 |  2.86 |
+| Bonded IOB                  |   14 |     0 |       210 |  6.67 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -146,13 +146,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   55 |        Flop & Latch |
-| LUT2     |   44 |                 LUT |
-| LUT3     |    9 |                 LUT |
-| LUT4     |    7 |                 LUT |
+| FDCE     |   56 |        Flop & Latch |
+| LUT2     |   40 |                 LUT |
+| LUT4     |   14 |                 LUT |
+| IBUF     |   11 |                  IO |
+| LUT3     |    7 |                 LUT |
 | LUT6     |    4 |                 LUT |
 | OBUF     |    3 |                  IO |
-| IBUF     |    3 |                  IO |
 | FDRE     |    3 |        Flop & Latch |
 | BUFG     |    2 |               Clock |
 | LUT1     |    1 |                 LUT |
